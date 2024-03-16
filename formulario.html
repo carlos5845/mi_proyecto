@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Prueba</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 100vh;
+      }
+      form {
+        background-color: aquamarine;
+        width: 300px;
+        padding: 30px;
+      }
+      button {
+        background-color: rgb(15, 81, 81);
+        padding: 10px;
+        color: black;
+      }
+      .container {
+        display: grid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="procesar.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+        <br />
+        <input type="submit" value="Enviar" />
+      </form>
+      <br />
+      <button onclick="mostrarNombres()">Mostrar Nombres</button>
+      <div id="mostrarNombres"></div>
+    </div>
+
+    <script>
+      function mostrarNombres() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "mostrar_nombres.php", true);
+        xhr.onload = function () {
+          if (this.status == 200) {
+            document.getElementById("mostrarNombres").innerHTML =
+              this.responseText;
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
