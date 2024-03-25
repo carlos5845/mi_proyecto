@@ -1,0 +1,16 @@
+¿Qué es PHP y para qué se utiliza?
+PHP es un lenguaje de programación diseñado específicamente para el desarrollo web.
+sirve para: 
+La interaccion con bases de datos.
+Describe la sintaxis básica de un script PHP.
+<?php
+// Código PHP aquí
+echo "¡Hola, mundo!";
+?>
+
+¿Qué tipos de datos se pueden almacenar en variables en PHP?
+
+Explica cómo funcionan los operadores de asignación en PHP.
+Escribe una expresión que verifique si un número es par en PHP.
+¿Cuál es el resultado de la expresión 5 == "5" en PHP?
+¿Cuál es el valor de la variable $nombre_completo en el ejemplo dado?
